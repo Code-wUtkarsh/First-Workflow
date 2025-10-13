@@ -45,7 +45,4 @@ jobs:
       - name: Make a script executable
         run: chmod +x ./script.sh
       - name: Run a bash script
-        uses: docker://node:18.16-alpine3.17
-        with:
-          entrypoint: ./script.sh
-          args: "Some string"
+        run: ./script.sh "Some string"
